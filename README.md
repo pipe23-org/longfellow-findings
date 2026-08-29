@@ -46,16 +46,6 @@ Both backends ship in the `pylongfellow` wheel. The full set runs in about ten s
 `specimens/` holds constructed inputs that are not yet in `longfellow-vectors`. These specimens
 are candidates for admission to the vectors repository.
 
-## Recorded, not demonstrated
+## License
 
-Observations written up elsewhere that have no file here yet.
-
-- A `doctype` of 256 bytes or more is silently replaced with a default in the C library
-  (`lib/circuits/mdoc/mdoc_witness.h:415`), and the proof verifies against the wrong scope
-  with no error. `pylongfellow` raises before the call, so demonstrating this reaches past
-  the binding's public API.
-- A `circuit_hash` longer than 64 bytes is an out-of-bounds heap write in the C library,
-  silent between 66 and 80 bytes.
-- The claim's namespace is not bound by the proof: matching is by element identifier and
-  CBOR value, and the namespace string is ignored. Observed on google-cpp only; whether
-  the two implementations agree here is untested.
+Apache-2.0.
