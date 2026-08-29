@@ -1,0 +1,13 @@
+[project]
+name = "longfellow-findings"
+version = "0"
+requires-python = ">=3.11"
+dependencies = [
+    "longfellow-vectors>=0.1.0",
+    "pylongfellow>=0.6.0",
+    "pytest>=8",
+    "zstandard>=0.25.0",
+]
+
+[tool.uv]
+package = false
